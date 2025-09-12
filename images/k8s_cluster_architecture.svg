@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 800"
+   version="1.1"
+   id="svg202"
+   sodipodi:docname="k8s_cluster_architecture.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview204"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.8596908"
+     inkscape:cx="603.32609"
+     inkscape:cy="371.02941"
+     inkscape:window-width="1366"
+     inkscape:window-height="696"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg202" />
+  <!-- Background -->
+  <rect
+     width="1200"
+     height="800"
+     fill="#f8f9fa"
+     id="rect2" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     font-family="Arial, sans-serif"
+     font-size="24"
+     font-weight="bold"
+     fill="#2c3e50"
+     id="text4">
+    Arquitectura del Clúster Kubernetes
+  </text>
+  <!-- VirtualBox Environment Box -->
+  <rect
+     x="50"
+     y="60"
+     width="1100"
+     height="700"
+     rx="10"
+     fill="none"
+     stroke="#34495e"
+     stroke-width="3"
+     stroke-dasharray="10,5"
+     id="rect6" />
+  <text
+     x="70"
+     y="85"
+     font-family="Arial, sans-serif"
+     font-size="16"
+     font-weight="bold"
+     fill="#34495e"
+     id="text8">
+    Entorno VirtualBox - Red Host-Only: 192.168.56.0/24
+  </text>
+  <!-- External User -->
+  <g
+     id="external-user">
+    <circle
+       cx="600"
+       cy="130"
+       r="25"
+       fill="#3498db"
+       stroke="#2980b9"
+       stroke-width="2"
+       id="circle10" />
+    <text
+       x="600"
+       y="135"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="12"
+       fill="white"
+       font-weight="bold"
+       id="text12">
+      USER
+    </text>
+    <text
+       x="600"
+       y="170"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="12"
+       fill="#2c3e50"
+       id="text14">
+      Acceso Externo
+    </text>
+  </g>
+  <!-- Master Node -->
+  <g
+     id="master-node">
+    <rect
+       x="100"
+       y="220"
+       width="300"
+       height="200"
+       rx="15"
+       fill="#e8f5e8"
+       stroke="#27ae60"
+       stroke-width="3"
+       id="rect17" />
+    <text
+       x="250"
+       y="245"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="18"
+       font-weight="bold"
+       fill="#27ae60"
+       id="text19">
+      Master Node (k8s-master)
+    </text>
+    <text
+       x="250"
+       y="265"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="14"
+       fill="#2c3e50"
+       id="text21">
+      192.168.56.10
+    </text>
+    <text
+       x="250"
+       y="280"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="12"
+       fill="#7f8c8d"
+       id="text23">
+      2GB RAM | 2 CPUs
+    </text>
+    <!-- Master Components -->
+    <rect
+       x="120"
+       y="295"
+       width="80"
+       height="30"
+       rx="5"
+       fill="#3498db"
+       stroke="#2980b9"
+       id="rect25" />
+    <text
+       x="160"
+       y="315"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="10"
+       fill="white"
+       font-weight="bold"
+       id="text27">API Server</text>
+    <rect
+       x="210"
+       y="295"
+       width="60"
+       height="30"
+       rx="5"
+       fill="#9b59b6"
+       stroke="#8e44ad"
+       id="rect29" />
+    <text
+       x="240"
+       y="315"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="10"
+       fill="white"
+       font-weight="bold"
+       id="text31">etcd</text>
+    <rect
+       x="280"
+       y="295"
+       width="80"
+       height="30"
+       rx="5"
+       fill="#e67e22"
+       stroke="#d35400"
+       id="rect33" />
+    <text
+       x="320"
+       y="315"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="10"
+       fill="white"
+       font-weight="bold"
+       id="text35">Scheduler</text>
+    <rect
+       x="120"
+       y="335"
+       width="100"
+       height="30"
+       rx="5"
+       fill="#e74c3c"
+       stroke="#c0392b"
+       id="rect37" />
+    <text
+       x="170"
+       y="355"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text39">Controller Mgr</text>
+    <rect
+       x="230"
+       y="335"
+       width="60"
+       height="30"
+       rx="5"
+       fill="#1abc9c"
+       stroke="#16a085"
+       id="rect41" />
+    <text
+       x="260"
+       y="355"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="10"
+       fill="white"
+       font-weight="bold"
+       id="text43">kubelet</text>
+    <rect
+       x="300"
+       y="335"
+       width="80"
+       height="30"
+       rx="5"
+       fill="#f39c12"
+       stroke="#e67e22"
+       id="rect45" />
+    <text
+       x="340"
+       y="355"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="10"
+       fill="white"
+       font-weight="bold"
+       id="text47">containerd</text>
+    <!-- Master Pod Network -->
+    <text
+       x="250"
+       y="385"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#27ae60"
+       font-weight="bold"
+       id="text49">
+      Pod Network: 10.244.0.0/24
+    </text>
+    <!-- Flannel Pod -->
+    <rect
+       x="190"
+       y="390"
+       width="120"
+       height="20"
+       rx="10"
+       fill="#ff6b6b"
+       stroke="#ff5252"
+       id="rect51" />
+    <text
+       x="250"
+       y="405"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text53">
+      Flannel Pod (CNI)
+    </text>
+  </g>
+  <!-- Worker Node 1 -->
+  <g
+     id="worker1-node">
+    <rect
+       x="450"
+       y="300"
+       width="250"
+       height="160"
+       rx="15"
+       fill="#fdf2e9"
+       stroke="#f39c12"
+       stroke-width="2"
+       id="rect56" />
+    <text
+       x="575"
+       y="325"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="16"
+       font-weight="bold"
+       fill="#f39c12"
+       id="text58">
+      Worker Node 1
+    </text>
+    <text
+       x="575"
+       y="340"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="12"
+       fill="#2c3e50"
+       id="text60">
+      192.168.56.11
+    </text>
+    <text
+       x="575"
+       y="355"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#7f8c8d"
+       id="text62">
+      1.5GB RAM | 1 CPU
+    </text>
+    <!-- Worker Components -->
+    <rect
+       x="470"
+       y="370"
+       width="60"
+       height="25"
+       rx="5"
+       fill="#1abc9c"
+       stroke="#16a085"
+       id="rect64" />
+    <text
+       x="500"
+       y="387"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text66">kubelet</text>
+    <rect
+       x="540"
+       y="370"
+       width="70"
+       height="25"
+       rx="5"
+       fill="#9b59b6"
+       stroke="#8e44ad"
+       id="rect68" />
+    <text
+       x="575"
+       y="387"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text70">kube-proxy</text>
+    <rect
+       x="620"
+       y="370"
+       width="70"
+       height="25"
+       rx="5"
+       fill="#f39c12"
+       stroke="#e67e22"
+       id="rect72" />
+    <text
+       x="655"
+       y="387"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text74">containerd</text>
+    <!-- Application Pods -->
+    <rect
+       x="470"
+       y="405"
+       width="80"
+       height="30"
+       rx="5"
+       fill="#27ae60"
+       stroke="#2ecc71"
+       id="rect76" />
+    <text
+       x="510"
+       y="425"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text78">Flask App Pod</text>
+    <rect
+       x="560"
+       y="405"
+       width="80"
+       height="30"
+       rx="5"
+       fill="#ff6b6b"
+       stroke="#ff5252"
+       id="rect80" />
+    <text
+       x="600"
+       y="425"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text82">Flannel Pod</text>
+    <text
+       x="575"
+       y="450"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="10"
+       fill="#f39c12"
+       font-weight="bold"
+       id="text84">
+      Pod Network: 10.244.1.0/24
+    </text>
+  </g>
+  <!-- Worker Node 2 -->
+  <g
+     id="worker2-node">
+    <rect
+       x="750"
+       y="300"
+       width="250"
+       height="160"
+       rx="15"
+       fill="#fdf2e9"
+       stroke="#f39c12"
+       stroke-width="2"
+       id="rect87" />
+    <text
+       x="875"
+       y="325"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="16"
+       font-weight="bold"
+       fill="#f39c12"
+       id="text89">
+      Worker Node 2
+    </text>
+    <text
+       x="875"
+       y="340"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="12"
+       fill="#2c3e50"
+       id="text91">
+      192.168.56.12
+    </text>
+    <text
+       x="875"
+       y="355"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#7f8c8d"
+       id="text93">
+      1.5GB RAM | 1 CPU
+    </text>
+    <!-- Worker Components -->
+    <rect
+       x="770"
+       y="370"
+       width="60"
+       height="25"
+       rx="5"
+       fill="#1abc9c"
+       stroke="#16a085"
+       id="rect95" />
+    <text
+       x="800"
+       y="387"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text97">kubelet</text>
+    <rect
+       x="840"
+       y="370"
+       width="70"
+       height="25"
+       rx="5"
+       fill="#9b59b6"
+       stroke="#8e44ad"
+       id="rect99" />
+    <text
+       x="875"
+       y="387"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text101">kube-proxy</text>
+    <rect
+       x="920"
+       y="370"
+       width="70"
+       height="25"
+       rx="5"
+       fill="#f39c12"
+       stroke="#e67e22"
+       id="rect103" />
+    <text
+       x="955"
+       y="387"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text105">containerd</text>
+    <!-- Application Pods -->
+    <rect
+       x="770"
+       y="405"
+       width="80"
+       height="30"
+       rx="5"
+       fill="#27ae60"
+       stroke="#2ecc71"
+       id="rect107" />
+    <text
+       x="810"
+       y="425"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text109">Flask App Pod</text>
+    <rect
+       x="860"
+       y="405"
+       width="80"
+       height="30"
+       rx="5"
+       fill="#ff6b6b"
+       stroke="#ff5252"
+       id="rect111" />
+    <text
+       x="900"
+       y="425"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="9"
+       fill="white"
+       font-weight="bold"
+       id="text113">Flannel Pod</text>
+    <text
+       x="875"
+       y="450"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="10"
+       fill="#f39c12"
+       font-weight="bold"
+       id="text115">
+      Pod Network: 10.244.2.0/24
+    </text>
+  </g>
+  <!-- Service and Load Balancing -->
+  <g
+     id="service">
+    <rect
+       x="500"
+       y="500"
+       width="200"
+       height="80"
+       rx="10"
+       fill="#ecf0f1"
+       stroke="#95a5a6"
+       stroke-width="2"
+       id="rect118" />
+    <text
+       x="600"
+       y="525"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="16"
+       font-weight="bold"
+       fill="#2c3e50"
+       id="text120">
+      webapp-service
+    </text>
+    <text
+       x="600"
+       y="545"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="12"
+       fill="#7f8c8d"
+       id="text122">
+      NodePort: 30001
+    </text>
+    <text
+       x="600"
+       y="560"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="12"
+       fill="#7f8c8d"
+       id="text124">
+      ClusterIP: 10.96.x.x
+    </text>
+    <text
+       x="600"
+       y="575"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#e74c3c"
+       font-weight="bold"
+       id="text126">
+      Load Balancer
+    </text>
+  </g>
+  <!-- Network Connections -->
+  <!-- External to Nodes (NodePort) -->
+  <line
+     x1="600"
+     y1="155"
+     x2="250"
+     y2="220"
+     stroke="#3498db"
+     stroke-width="3"
+     marker-end="url(#arrowblue)"
+     id="line129" />
+  <line
+     x1="600"
+     y1="155"
+     x2="575"
+     y2="300"
+     stroke="#3498db"
+     stroke-width="3"
+     marker-end="url(#arrowblue)"
+     id="line131" />
+  <line
+     x1="600"
+     y1="155"
+     x2="875"
+     y2="300"
+     stroke="#3498db"
+     stroke-width="3"
+     marker-end="url(#arrowblue)"
+     id="line133" />
+  <!-- Master to Workers (API Communication) -->
+  <line
+     x1="400.2149"
+     y1="272.6647"
+     x2="449.99936"
+     y2="349.69699"
+     stroke="#e74c3c"
+     stroke-width="2"
+     marker-end="url(#arrowred)"
+     id="line135" />
+  <line
+     x1="399.74542"
+     y1="272.38202"
+     x2="784.82837"
+     y2="295.47116"
+     stroke="#e74c3c"
+     stroke-width="2"
+     marker-end="url(#arrowred)"
+     id="line137" />
+  <!-- Service to Pods -->
+  <line
+     x1="520"
+     y1="520"
+     x2="510"
+     y2="435"
+     stroke="#27ae60"
+     stroke-width="2"
+     marker-end="url(#arrowgreen)"
+     id="line139" />
+  <line
+     x1="680"
+     y1="520"
+     x2="810"
+     y2="435"
+     stroke="#27ae60"
+     stroke-width="2"
+     marker-end="url(#arrowgreen)"
+     id="line141" />
+  <!-- Flannel Network (VXLAN) -->
+  <path
+     d="M 250 390 Q 450 350 575 405"
+     stroke="#ff6b6b"
+     stroke-width="3"
+     fill="none"
+     stroke-dasharray="5,5"
+     id="path143" />
+  <path
+     d="M 575 405 Q 750 350 900 405"
+     stroke="#ff6b6b"
+     stroke-width="3"
+     fill="none"
+     stroke-dasharray="5,5"
+     id="path145" />
+  <path
+     d="M 900 405 Q 750 480 600 405"
+     stroke="#ff6b6b"
+     stroke-width="3"
+     fill="none"
+     stroke-dasharray="5,5"
+     id="path147" />
+  <!-- Network Labels -->
+  <text
+     x="180"
+     y="200"
+     font-family="Arial, sans-serif"
+     font-size="12"
+     fill="#3498db"
+     font-weight="bold"
+     id="text149">
+    NodePort: 30001
+  </text>
+  <text
+     x="413.56299"
+     y="271.99838"
+     font-family="Arial, sans-serif"
+     font-size="11px"
+     fill="#e74c3c"
+     font-weight="bold"
+     id="text151">API Server: 6443</text>
+  <text
+     x="413.48486"
+     y="289.25049"
+     font-family="Arial, sans-serif"
+     font-size="11px"
+     fill="#ff6b6b"
+     font-weight="bold"
+     id="text153">Flannel VXLAN (eth1)</text>
+  <!-- Legend -->
+  <g
+     id="legend">
+    <rect
+       x="50"
+       y="620"
+       width="300"
+       height="120"
+       rx="5"
+       fill="#ffffff"
+       stroke="#bdc3c7"
+       stroke-width="1"
+       id="rect155" />
+    <text
+       x="200"
+       y="640"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="14"
+       font-weight="bold"
+       fill="#2c3e50"
+       id="text157">
+      Leyenda
+    </text>
+    <line
+       x1="70"
+       y1="655"
+       x2="100"
+       y2="655"
+       stroke="#3498db"
+       stroke-width="3"
+       id="line159" />
+    <text
+       x="110"
+       y="660"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text161">Acceso Externo (NodePort)</text>
+    <line
+       x1="70"
+       y1="675"
+       x2="100"
+       y2="675"
+       stroke="#e74c3c"
+       stroke-width="2"
+       id="line163" />
+    <text
+       x="110"
+       y="680"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text165">Comunicación API Server</text>
+    <line
+       x1="70"
+       y1="695"
+       x2="100"
+       y2="695"
+       stroke="#27ae60"
+       stroke-width="2"
+       id="line167" />
+    <text
+       x="110"
+       y="700"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text169">Balanceo de Carga</text>
+    <line
+       x1="70"
+       y1="715"
+       x2="100"
+       y2="715"
+       stroke="#ff6b6b"
+       stroke-width="3"
+       stroke-dasharray="5,5"
+       id="line171" />
+    <text
+       x="110"
+       y="720"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text173">Red de Pods (Flannel VXLAN)</text>
+  </g>
+  <!-- Network Info Box -->
+  <g
+     id="network-info">
+    <rect
+       x="850"
+       y="620"
+       width="300"
+       height="120"
+       rx="5"
+       fill="#ffffff"
+       stroke="#bdc3c7"
+       stroke-width="1"
+       id="rect176" />
+    <text
+       x="1000"
+       y="640"
+       text-anchor="middle"
+       font-family="Arial, sans-serif"
+       font-size="14"
+       font-weight="bold"
+       fill="#2c3e50"
+       id="text178">
+      Información de Red
+    </text>
+    <text
+       x="870"
+       y="660"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text180">
+      • Host Network: 192.168.56.0/24
+    </text>
+    <text
+       x="870"
+       y="675"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text182">
+      • Pod Network: 10.244.0.0/16
+    </text>
+    <text
+       x="870"
+       y="690"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text184">
+      • Service Network: 10.96.0.0/12
+    </text>
+    <text
+       x="870"
+       y="705"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text186">
+      • CNI: Flannel con VXLAN
+    </text>
+    <text
+       x="870"
+       y="720"
+       font-family="Arial, sans-serif"
+       font-size="11"
+       fill="#2c3e50"
+       id="text188">
+      • NodePort: 30001 (webapp-service)
+    </text>
+  </g>
+  <!-- Arrow Markers -->
+  <defs
+     id="defs200">
+    <marker
+       id="arrowblue"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 0,6 9,3"
+         fill="#3498db"
+         id="polygon191" />
+    </marker>
+    <marker
+       id="arrowred"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 0,6 9,3 "
+         fill="#e74c3c"
+         id="polygon194" />
+    </marker>
+    <marker
+       id="arrowgreen"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <polygon
+         points="0,0 0,6 9,3"
+         fill="#27ae60"
+         id="polygon197" />
+    </marker>
+  </defs>
+</svg>
