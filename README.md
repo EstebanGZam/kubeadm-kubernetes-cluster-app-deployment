@@ -1,15 +1,15 @@
 # Laboratorio: Instalación de un Clúster de Kubernetes con Kubeadm y Despliegue de una Aplicación
 
 ## Tabla de Contenidos
-1. [Introducción](/images/#introducción)
-2. [Arquitectura de la Solución](/images/#arquitectura-de-la-solución)
-3. [Preparación del Entorno](/images/#preparación-del-entorno)
-4. [Instalación y Configuración del Clúster](/images/#instalación-y-configuración-del-clúster)
-5. [Despliegue de la Aplicación](/images/#despliegue-de-la-aplicación)
-6. [Dificultades Encontradas y Soluciones](/images/#dificultades-encontradas-y-soluciones)
-7. [Verificación y Pruebas](/images/#verificación-y-pruebas)
-8. [Conclusiones](/images/#conclusiones)
-9. [Anexos](/images/#anexos)
+1. [Introducción](#introducción)
+2. [Arquitectura de la Solución](#arquitectura-de-la-solución)
+3. [Preparación del Entorno](#preparación-del-entorno)
+4. [Instalación y Configuración del Clúster](#instalación-y-configuración-del-clúster)
+5. [Despliegue de la Aplicación](#despliegue-de-la-aplicación)
+6. [Dificultades Encontradas y Soluciones](#dificultades-encontradas-y-soluciones)
+7. [Verificación y Pruebas](#verificación-y-pruebas)
+8. [Conclusiones](#conclusiones)
+9. [Anexos](#anexos)
 
 ## Introducción
 
